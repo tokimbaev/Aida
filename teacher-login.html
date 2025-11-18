@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход для учителей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">👨‍🏫 Вход для учителей</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="students.html">Для студентов</a></li>
+                <li><a href="admin-login.html">Администратор</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="login-form">
+            <h2>Вход для учителей</h2>
+            <form id="teacherLoginForm">
+                <div class="form-group">
+                    <label for="username">Логин:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-teacher">Войти</button>
+            </form>
+            <div class="demo-credentials">
+                <p>Демо доступы создаются администратором</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

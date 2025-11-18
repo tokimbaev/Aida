@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">⚙️ Панель администратора</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#" id="logoutBtn">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard">
+            <h2>Управление системой</h2>
+            
+            <div class="admin-sections">
+                <div class="admin-section">
+                    <h3>Управление учителями</h3>
+                    <form id="addTeacherForm" class="compact-form">
+                        <div class="form-row">
+                            <input type="text" id="teacherUsername" placeholder="Логин учителя" required>
+                            <input type="password" id="teacherPassword" placeholder="Пароль" required>
+                            <button type="submit" class="btn btn-teacher">Добавить учителя</button>
+                        </div>
+                    </form>
+                    
+                    <div class="users-list">
+                        <h4>Зарегистрированные учителя</h4>
+                        <div id="teachersList"></div>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Управление лекциями</h3>
+                    <div class="lectures-management">
+                        <div id="allLecturesList"></div>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Статистика системы</h3>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <h4>Всего учителей</h4>
+                            <span id="teachersCount">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Всего лекций</h4>
+                            <span id="lecturesCount">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Объем видео</h4>
+                            <span id="storageUsage">0 МБ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

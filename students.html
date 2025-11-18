@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лекции для студентов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">📚 Лекции для студентов</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="teacher-login.html">Учителя</a></li>
+                <li><a href="admin-login.html">Администратор</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="lectures-container">
+            <h1>Доступные лекции</h1>
+            <div class="search-filter">
+                <input type="text" id="searchLectures" placeholder="Поиск по лекциям...">
+                <select id="filterTeacher">
+                    <option value="">Все учителя</option>
+                </select>
+            </div>
+            <div id="studentLecturesList" class="lectures-grid">
+                <!-- Лекции будут загружены через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель учителя</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">👨‍🏫 Панель учителя</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="students.html">Для студентов</a></li>
+                <li><a href="#" id="logoutBtn">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard">
+            <div class="user-welcome">
+                <h2>Добро пожаловать, <span id="teacherName"></span>!</h2>
+            </div>
+
+            <div class="upload-section">
+                <h3>Добавить новую лекцию</h3>
+                <form id="lectureForm">
+                    <div class="form-group">
+                        <label for="lectureTitle">Название лекции:</label>
+                        <input type="text" id="lectureTitle" name="lectureTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lectureDescription">Описание:</label>
+                        <textarea id="lectureDescription" name="lectureDescription" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="videoFile">Видео лекции:</label>
+                        <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
+                        <small>Поддерживаемые форматы: MP4, WebM, OGG</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lectureFile">Дополнительные материалы (PDF, PPT, DOC):</label>
+                        <input type="file" id="lectureFile" name="lectureFile" multiple>
+                    </div>
+                    <button type="submit" class="btn btn-teacher">Загрузить лекцию</button>
+                </form>
+            </div>
+
+            <div class="my-lectures">
+                <h3>Мои лекции</h3>
+                <div id="lecturesList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
